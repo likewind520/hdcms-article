@@ -1,0 +1,30 @@
+<style lang="less">
+.user{
+  .icon{
+    text-align: center;
+    image{
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+</style>
+<template>
+  <view class="user">
+    <view class="icon">
+      <image mode="aspectFill" src="../images/timg.jpg"></image>
+      <view>哈哈</view>
+    </view>
+  </view>
+  <view>
+    <button type="primary" size="default"  plain="true"> 退出 </button>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class My extends wepy.page {
+
+  }
+</script>

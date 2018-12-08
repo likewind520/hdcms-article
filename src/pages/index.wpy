@@ -1,0 +1,62 @@
+<style lang="less">
+
+</style>
+<template>
+  <view class="">
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+      <repeat for="{{imgUrls}}" key="index" index="index" item="item">
+        <swiper-item>
+          <image src="{{item.image}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </repeat>
+    </swiper>
+  </view>
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">文字组合列表</view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">标题一</view>
+        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+      </view>
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">标题二</view>
+        <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+      </view>
+    </view>
+    <view class="weui-panel__ft">
+      <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">查看更多</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import util from '@/services/util.js'
+  export default class Index extends wepy.page {
+    data = {
+      imgUrls: [
+        {
+          id: 1,
+          image: '../images/tooopen_sy_143912755726.jpg'
+        },
+        {
+          id: 2,
+          image: '../images/tooopen_sy_175866434296.jpg'
+        },
+        {
+          id: 3,
+          image: '../images/tooopen_sy_175833047715.jpg'
+        }
+      ]
+    };
+    onLoad = () => {
+      // util.api({url: 'categories'})
+      // util.api({url: 'articles'})
+      util.login({data: {email: '942167232@qq.com', password: '1111'}})
+      // util.logout()
+    }
+  }
+</script>
