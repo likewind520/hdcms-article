@@ -23,6 +23,7 @@ const util = {
       response.data.expires_in = new Date().getTime() + response.data.expires_in * 1000
       wepy.setStorageSync('token', response)
     }
+    return response
   },
   // 获取存储的 token 数据
   getToken: () => {
@@ -49,6 +50,7 @@ const util = {
     if (response.statusCode === 200) {
       wepy.removeStorageSync('token')
     }
+    return response
   }
 }
 export default util

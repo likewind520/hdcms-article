@@ -1,7 +1,5 @@
 <style lang="less">
-.login{
-  margin-top: 10px;
-}
+
 </style>
 <template>
   <view>
@@ -13,20 +11,19 @@
             <view class="weui-label">邮箱</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" name="email" placeholder="请输入邮箱" />
+            <input class="weui-input" name="email" placeholder="请输入邮箱"/>
           </view>
         </view>
-
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
             <view class="weui-label">密码</view>
           </view>
           <view class="weui-cell__bd">
-            <input class="weui-input" type="password" name="password" placeholder="请输入密码" />
+            <input class="weui-input" name="password" placeholder="请输入密码"/>
           </view>
         </view>
       </view>
-      <button type="primary" size="default"  plain="true"> 登录 </button>
+      <button type="default" form-type="submit"> 登录</button>
     </form>
   </view>
 </template>
@@ -47,6 +44,7 @@
         })
         return false
       }
+      // 抽象正则
       if (!/.+@.+/.test(formData.email)) {
         wepy.showToast({
           title: '请输入正确邮箱',

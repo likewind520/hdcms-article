@@ -1,5 +1,6 @@
 <style lang="less">
   @import 'style/weui.less';
+  @import "wxParse/wxParse.wxss";
 
   .container {
     height: 100%;
@@ -24,15 +25,17 @@
   export default class extends wepy.app {
     config = {
       pages: [
-        'pages/index',
-        'pages/login',
         'pages/my',
-        'pages/category'
+        'pages/login',
+        'pages/category',
+        'pages/list',
+        'pages/index',
+        'pages/article'
       ],
       window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
-        navigationBarTitleText: 'WeChat',
+        navigationBarTitleText: '黎明之光',
         navigationBarTextStyle: 'black'
       },
       tabBar: {
